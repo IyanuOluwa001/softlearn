@@ -195,3 +195,67 @@ print(order.strip().upper())
 # CODE 17
 order = "  espresso  "
 print(order.strip().upper())
+
+# CODE 18
+name = "Alice"
+drink = "latte"
+price = 4.50
+
+# The f-string automatically formats the variables inside the string
+receipt = f"Order for {name}: {drink} — ₦{price:.2f}"
+print ("-")
+print (receipt)
+
+# CODE 19 
+customer = "Bob"
+total = 12.0
+print ("-")
+print(f"Thank you, {customer}! Total: ₦{total:.2f}")
+
+# CODE 20
+raw_order_list = "latte,espresso,mocha"
+menu_display = ""
+
+# 1. Split the comma-separated string into a List
+items = raw_order_list.split(",")
+print ("-")
+print (raw_order_list)
+
+# 2. Join the List using a newline character (\n) as the separator
+menu_display = "\n".join(items)
+print ("-")
+print (menu_display)
+
+# CODE 21
+sentence = "latte and espresso"
+words = sentence.split(" and ")
+print ("-")
+print(words)
+rejoined = "-".join(words)
+print(rejoined)
+
+name_field = "  jOHn  "
+email_field = " JOHN@Company.com  "
+
+clean_name = name_field.strip().capitalize
+email_field = email_field.strip().lower
+
+
+
+# CODE 22 - Creating and calling a function
+# 1. Defining the routine (This does not run the code!)
+def brew_coffee():
+    print()
+    print("Grinding espresso beans...")
+    print("Brewing hot coffee into the cup...")
+    print("Coffee is ready!")
+
+# 2. Calling the routine (This executes the nested lines)
+brew_coffee()
+
+# CODE 23
+def greet_barista():
+    print()
+    print("Hello, barista!")
+
+greet_barista()

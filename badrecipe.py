@@ -1,4 +1,5 @@
 import keyword
+import numpy as np
 
 # CODE 1
 # print("Attempting to brew...")
@@ -404,15 +405,51 @@ import keyword
 # label(name="Alice", drink="espresso")
 
 #CODE 40
-def toppings(*args):
-    print(args)
-toppings("chocolate", "sprinkles", "whipped cream")
+# def toppings(*args):
+#     print(args)
+# toppings("chocolate", "sprinkles", "whipped cream")
 
-#CODE 41
-def make_coffee(*toppings):
-    print ("Coffee with:")
+# #CODE 41
+# def make_coffee(*toppings):
+#     print ("Coffee with:")
 
-    for topping in toppings:
-        print(f"-{topping}")
+#     for topping in toppings:
+#         print(f"-{topping}")
 
-make_coffee("chocolate", "sprinkles", "whipped cream")
+# make_coffee("chocolate", "sprinkles", "whipped cream")
+
+# CODE 42
+# def add_numbers(a: int, b: int) -> int:
+#     return a + b
+
+# print (add_numbers(1,2))
+
+# CODE 43
+# Need to install numpy for this code to work   
+# def try_numpy():
+#     prices = np.array([1200, 3500, 800, 2500])
+#     discounted = prices * 0.9
+#     return discounted
+
+# print(try_numpy())
+
+
+# # Code snippet for panda
+# import pandas as pd
+
+# df = pd.read_csv("sales.csv")
+# print(df.head())
+
+# # Code snippet for Scikit-learn
+# from sklearn.linear_model import LogisticRegression
+
+# model = LogisticRegression()
+# model.fit(X_train, y_train)
+# predictions = model.predict(X_test)
+
+# # Code snippet for PyTouch
+# import torch
+# import torch.nn as nn
+
+# model = nn.Linear(10, 1)
+

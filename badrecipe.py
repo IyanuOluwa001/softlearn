@@ -1,5 +1,5 @@
 import keyword
-import numpy as np
+#import numpy as np
 
 # CODE 1
 # print("Attempting to brew...")
@@ -453,3 +453,135 @@ import numpy as np
 
 # model = nn.Linear(10, 1)
 
+# CODE 44 - Local variables
+# def make_latte():
+#     # These are local variables (napkin notes)
+#     coffee_grams = 18
+#     milk_ounces = 8
+    
+#     print(f"Brewing with {coffee_grams}g of coffee and {milk_ounces}oz of milk.")
+
+# make_latte()
+
+# # This will CRASH the program! Comment it out for the program to run normally
+# print(coffee_grams)
+
+# CODE 45 - Commiting a value to global variable
+# def steam_milk():
+#     temp = 65
+#     print(f"Milk steamed to {temp} degrees.")
+#     return temp  # Hand the value back before the napkin is destroyed!
+
+# # Capture the returned value in a global variable
+# final_temp = steam_milk()
+# print(f"The final temperature was {final_temp}")
+
+# CODE 46
+# Global variable (written on the public whiteboard)
+# menu_price = 4.50
+
+# def serve_customer(name):
+#     # We can read the global variable naturally
+#     print(f"Charging {name} ₦{menu_price:.2f} for their latte.")
+
+# serve_customer("Alice")
+
+# CODE 47 - Reading global variables
+# menu_price = 4.50  # Global
+
+# def update_price(new_price):
+#     menu_price = new_price  # This accidentally creates a LOCAL variable!
+#     print(f"Local function variable set to: ₦{menu_price:.2f}")
+
+# update_price(5.00)
+# print(f"Global whiteboard price is: ₦{menu_price:.2f}")
+
+# CODE 48
+# shop_name = "Espresso Cart"
+# def print_shop():
+#     print("Welcome to " + shop_name)
+
+# print_shop()
+
+# CODE 49-How to use global
+# menu_price = 4.50  # Global
+
+# def update_price(new_price):
+#     global menu_price  # Link this function to the global whiteboard variable
+#     menu_price = new_price  # This now updates the global whiteboard!
+#     print(f"Whiteboard price updated to ₦{menu_price:.2f}")
+
+# update_price(5.00)
+# print(f"Current menu price is now: ₦{menu_price:.2f}") # Output: 5.00
+
+# CODE 50 - A wrong way to access global variable
+# total_sales = 0.0
+
+# def record_sale(amount):
+#     total_sales = total_sales + amount
+#     print(f"Sale recorded: ₦{amount:.2f}")
+
+# record_sale(4.50)
+
+# CODE 51 - Access global variable the right way
+# total_sales = 0.0  # Global
+
+# def record_sale(amount):
+#     global total_sales  # Explicitly link to the global variable
+#     total_sales = total_sales + amount
+#     print(f"Sale recorded: ₦{amount:.2f}")
+
+# record_sale(4.50)
+# print(f"Register total sales: ₦{total_sales:.2f}")
+
+# CODE 52 - another use of global
+# count = 0
+# def increment():
+#     global count
+#     count = count + 1
+#     print(count)
+
+# increment()
+# increment()
+
+# CODE 53 - Local and Global
+# global_sales= 0
+
+# def make_drink():
+#     local_count = 0  # Born fresh on every function call
+#     global global_sales
+    
+#     local_count = local_count + 1
+#     global_sales = global_sales + 1
+#     print(f"Local: {local_count}, Global: {global_sales}")
+
+# make_drink()
+# make_drink()
+# make_drink()
+# #Local will remain 1, because it resets everytime the program finish running.
+
+# CODE 54 - Defining and using nonlocal variable
+# def run_coffee_cart():
+#     # Outer parent function's local variable
+#     current_order = "Espresso"
+    
+#     def change_order(new_drink):
+#         nonlocal current_order  # Link to the parent function's variable
+#         current_order = new_drink
+#         print(f"Order updated to: {current_order}")
+        
+#     change_order("Latte")
+#     print(f"Final cart order: {current_order}")
+
+# run_coffee_cart()
+
+# CODE 55 - Another trial
+def outer():
+    x = "original"
+    def inner():
+        nonlocal x
+        x = "modified"
+    inner()
+    print(x)
+
+outer()

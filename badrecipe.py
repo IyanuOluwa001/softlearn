@@ -453,7 +453,34 @@ import keyword
 
 # model = nn.Linear(10, 1)
 
-# CODE 44 - Local variables
+# CODE 44 (showing top-to-bottom execution)
+# age = 17
+# if age >= 18:
+#     print("You can open the account")
+# else:
+#     print("You need a guardian")
+# print("Thank you for visiting")
+
+# CODE 45 (printing by layer to reveal t-t-b execution)
+# print ()
+# print("About to set balance")
+# balance = 5000
+# print("Balance set to", balance)
+# balance = balance - 1000
+# print("After withdrawal", balance)
+
+#  CODE 46 (Demonstrating standard input, output and error)
+name = input("Enter your name: ")
+print("Hello,", name)
+
+# CODE 47 (Standard input can be from a functions too)
+city = input("Which city do you live in? ")
+print("You entered:", city)
+
+# we can use this command to seperate output
+# python process.py > results.txt 2> errors.txt
+
+# CODE 48 - Local variables
 # def make_latte():
 #     # These are local variables (napkin notes)
 #     coffee_grams = 18
@@ -466,7 +493,7 @@ import keyword
 # # This will CRASH the program! Comment it out for the program to run normally
 # print(coffee_grams)
 
-# CODE 45 - Commiting a value to global variable
+# CODE 49 - Commiting a value to global variable
 # def steam_milk():
 #     temp = 65
 #     print(f"Milk steamed to {temp} degrees.")
@@ -476,7 +503,7 @@ import keyword
 # final_temp = steam_milk()
 # print(f"The final temperature was {final_temp}")
 
-# CODE 46
+# CODE 50
 # Global variable (written on the public whiteboard)
 # menu_price = 4.50
 
@@ -486,7 +513,7 @@ import keyword
 
 # serve_customer("Alice")
 
-# CODE 47 - Reading global variables
+# CODE 51 - Reading global variables
 # menu_price = 4.50  # Global
 
 # def update_price(new_price):
@@ -496,14 +523,14 @@ import keyword
 # update_price(5.00)
 # print(f"Global whiteboard price is: ₦{menu_price:.2f}")
 
-# CODE 48
+# CODE 52
 # shop_name = "Espresso Cart"
 # def print_shop():
 #     print("Welcome to " + shop_name)
 
 # print_shop()
 
-# CODE 49-How to use global
+# CODE 53-How to use global
 # menu_price = 4.50  # Global
 
 # def update_price(new_price):
@@ -514,7 +541,7 @@ import keyword
 # update_price(5.00)
 # print(f"Current menu price is now: ₦{menu_price:.2f}") # Output: 5.00
 
-# CODE 50 - A wrong way to access global variable
+# CODE 54 - A wrong way to access global variable
 # total_sales = 0.0
 
 # def record_sale(amount):
@@ -523,7 +550,7 @@ import keyword
 
 # record_sale(4.50)
 
-# CODE 51 - Access global variable the right way
+# CODE 55 - Access global variable the right way
 # total_sales = 0.0  # Global
 
 # def record_sale(amount):
@@ -534,7 +561,7 @@ import keyword
 # record_sale(4.50)
 # print(f"Register total sales: ₦{total_sales:.2f}")
 
-# CODE 52 - another use of global
+# CODE 56 - another use of global
 # count = 0
 # def increment():
 #     global count
@@ -544,7 +571,7 @@ import keyword
 # increment()
 # increment()
 
-# CODE 53 - Local and Global
+# CODE 57 - Local and Global
 # global_sales= 0
 
 # def make_drink():
@@ -560,7 +587,7 @@ import keyword
 # make_drink()
 # #Local will remain 1, because it resets everytime the program finish running.
 
-# CODE 54 - Defining and using nonlocal variable
+# CODE 58 - Defining and using nonlocal variable
 # def run_coffee_cart():
 #     # Outer parent function's local variable
 #     current_order = "Espresso"
@@ -575,7 +602,7 @@ import keyword
 
 # run_coffee_cart()
 
-# CODE 55 - Another trial
+# CODE 59 - Another trial
 def outer():
     x = "original"
     def inner():
